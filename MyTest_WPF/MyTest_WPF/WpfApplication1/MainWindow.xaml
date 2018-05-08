@@ -81,13 +81,19 @@ CenterX="0" CenterY="0"/>
             <MenuItem Header="View"/>
         </Menu>
 
-        <StackPanel DockPanel.Dock ="Left" Orientation="Vertical" Background="#ECE9D8" Width="74">
+        <StackPanel DockPanel.Dock ="Left" Orientation="Vertical" Background="#ECE9D8" Width="108">
             <TextBlock Margin="3"  Text="Controls"/>
             <Button Margin="3,5" HorizontalAlignment="Left" Click="b1Click">Subdivide</Button>
             <Button Margin="3,5" HorizontalAlignment="Left" Click="b2Click">Clear</Button>
+            <Slider Width="100" Value="0" Orientation="Horizontal"
+ValueChanged="slider1change" HorizontalAlignment="Left"
+IsSnapToTickEnabled="True" Maximum="20" TickFrequency="2"
+AutoToolTipPlacement="BottomRight" TickPlacement="BottomRight"
+AutoToolTipPrecision="2" IsDirectionReversed="False"
+IsMoveToPointEnabled="False"/>
         </StackPanel>
         <Grid ClipToBounds="True">
-            <k:GraphPaper x:Name="Paper"></k:GraphPaper>
+            <k:GraphPaper x:Name="Paper"/>
         </Grid>
     </DockPanel>
 </Window>
